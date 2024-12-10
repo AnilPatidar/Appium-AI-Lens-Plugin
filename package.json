@@ -1,0 +1,64 @@
+{
+  "name": "ai-appium-lens",
+  "version": "4.0.1",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "test": "mocha --require ts-node/register -p test/plugin.spec.js --exit --timeout 260000",
+    "prepublish": "npx tsc",
+    "lint": "eslint '**/*.ts' --fix",
+    "prettier": "prettier '**/*.js' --write --single-quote",
+    "clear-cache": "rm -rf $HOME/.cache/ai-appium-lens-plugin",
+    "uninstall": "export APPIUM_HOME=/Users/anil-patidar/.appium && (appium plugin uninstall ai-appium-lens || exit 0)",
+    "install-plugin": "export APPIUM_HOME=/Users/anil-patidar/.appium && npm run build && appium plugin install --source=local $(pwd)",
+    "reinstall-plugin": "export APPIUM_HOME=/Users/anil-patidar/.appium && (appium plugin uninstall ai-appium-lens || exit 0) && npm run install-plugin",
+    "run-server": "export APPIUM_HOME=/Users/anil-patidar/.appium && appium server -ka 800 --use-plugins=ai-appium-lens -pa /wd/hub"
+  },
+  "keywords": [],
+  "author": "anil patidar",
+  "license": "ISC",
+  "description": "Revolutionizing Test Automation with AI-Enabled Appium Plugin, Harnessing AI for Intelligent UI Interactions and Accessibility Insights , An AI-powered Appium plugin that combines:\nGoogle Vision Vertex AI for UI analysis.\nGemini NLP for natural language understanding.\nDesigned to make mobile app automation smarter, more intuitive, and accessible.",
+  "peerDependencies": {
+    "appium": "^2.12.1"
+  },
+  "appium": {
+    "pluginName": "ai-appium-lens",
+    "mainClass": "AIAppiumLens",
+    "pluginVersion": "4.0.1",
+    "pluginType": "appium",
+    "pluginPlatform": "android",
+    "pluginDescription": "My Appium Plugin",
+    "pluginKeywords": [
+      "appium",
+      "plugin"
+    ],
+    "pluginLicense": "ISC",
+    "pluginAuthor": "anil.patidar",
+    "pluginHomepage": ""
+  },
+  "devDependencies": {
+    "@appium/base-plugin": "^2.2.47",
+    "@types/lokijs": "^1.5.14",
+    "appium-support": "^2.55.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.7.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "Dependencies": {
+    "@types/lodash": "^4.17.13",
+    "@typescript-eslint/eslint-plugin": "^8.14.0",
+    "@typescript-eslint/parser": "^8.14.0",
+    "eslint": "^9.15.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.3",
+    "@google-cloud/vertexai": "^1.9.0",
+    "@google-cloud/vision": "^4.3.2"
+  },
+  "dependencies": {
+    "@google-cloud/vertexai": "^1.9.0",
+    "@google-cloud/vision": "^4.3.2",
+    "lokijs": "^1.5.12"
+  }
+}

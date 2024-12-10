@@ -1,0 +1,9 @@
+node_modules
+node_modules
+src/screenshots/
+.npmrc
+coordinates.db
+src/google-vertexai.js
+src/google-vision.js
+src/plugin.js
+src/utils/coordinate-finder.js
