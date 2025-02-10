@@ -60,8 +60,8 @@ Step 2: Enable Vertex AI API
 Enable the API:
 Navigate to the API & Services section from the left sidebar in the Google Cloud Console.
 Click + ENABLE APIS AND SERVICES.
-Search for Vertex AI and click on it.
-Click Enable to activate the Vertex AI API for your project.
+Search for Vertex AI , Cloud Vision API and click on it.
+Click Enable to activate the Vertex AI API, Cloud Vision API for your project.
 Step 3: Set Up Administrative Access
 Set Up IAM (Identity and Access Management):
 
