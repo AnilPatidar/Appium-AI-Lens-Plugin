@@ -38,7 +38,76 @@ You must have a google cloud account with payment configured and a project creat
 * Google Vision AI 
 * Google Vertex AI 
 
-Download google cloud sdk ( google-cloud-cli-darwin-arm.tar.gz) : https://cloud.google.com/sdk/docs/install
+Two ways to configure gcloud
+
+1. Create a service account on google cloud account
+
+To set up a Google Cloud account and enable access to Google Vertex AI and administrative access, follow these steps:
+
+Step 1: Create a Google Cloud Account
+Go to Google Cloud Console:
+
+Visit Google Cloud Console.
+Sign Up / Log In:
+
+If you don’t have a Google account, sign up for one. If you already have an account, log in.
+Create a New Project:
+
+In the Cloud Console, click on the project dropdown in the top-left corner.
+Click New Project to create a new Google Cloud project. You’ll be prompted to name the project, select a billing account (or create one), and choose a location.
+After creation, ensure the new project is selected in the project dropdown.
+Step 2: Enable Vertex AI API
+Enable the API:
+Navigate to the API & Services section from the left sidebar in the Google Cloud Console.
+Click + ENABLE APIS AND SERVICES.
+Search for Vertex AI and click on it.
+Click Enable to activate the Vertex AI API for your project.
+Step 3: Set Up Administrative Access
+Set Up IAM (Identity and Access Management):
+
+From the left sidebar, go to IAM & Admin → IAM.
+Here you can grant access to users by adding their email addresses. You can assign different roles depending on the permissions you want to provide.
+Grant Roles:
+
+The most relevant roles for administrative access in Vertex AI are:
+Vertex AI Admin: Full administrative access to Vertex AI resources.
+Project Owner: Grants full control over the project, including IAM and API access (this will give you admin access).
+To assign a role:
+Click Add at the top.
+Enter the email address of the user you want to assign access to.
+Under Select a role, choose the desired role (e.g., Vertex AI Admin or Project Owner).
+Click Save.
+Grant Permissions for Google Cloud Storage:
+
+Since Vertex AI uses Google Cloud Storage (GCS) for data storage, ensure that users have appropriate access to the relevant GCS buckets.
+Go to Storage → Browser, then select the desired bucket and add appropriate IAM permissions.
+Step 4: Set Up Billing (If Not Already Done)
+Activate Billing:
+Go to Billing in the left sidebar and link a billing account to your Google Cloud project.
+You may need to set up a billing account if you haven't already. Ensure that billing is active to use Vertex AI and other Google Cloud services.
+Step 5: Create and Set Up a Service Account (Optional)
+If you plan to use Vertex AI programmatically or automate tasks, setting up a service account is recommended.
+
+Create Service Account:
+
+Go to IAM & Admin → Service Accounts.
+Click Create Service Account.
+Enter the service account name and ID.
+Assign the service account roles, e.g., Vertex AI User, Storage Admin, etc.
+Click Done.
+Download Service Account Key (if needed):
+
+After creating the service account, click on it.
+Click Add Key → Create New Key.
+Choose JSON format and click Create to download the key file. You can use this key for programmatic access (via SDKs, APIs, etc.).
+
+Set enviornment variables :
+
+```sh
+export GOOGLE_APPLICATION_CREDENTIALS="/Users/--/Downloads/serviceaccount_vertex_ai.json"
+```
+
+2.Or if you want easy setup,  Download google cloud sdk ( google-cloud-cli-darwin-arm.tar.gz) : https://cloud.google.com/sdk/docs/install
 
 Unzip and go to the path
 
