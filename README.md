@@ -116,7 +116,14 @@ export PATH=$PATH:<Actual-PATH>/google-cloud-sdk/bin
 source ~/.zshrc
 gcloud init
 gcloud auth application-default login
+```
 
+Set enviornment variables : 
+
+```sh
+export GOOGLE_PROJECT_ID=your-project-id
+export GOOGLE_LOCATION=asia-south1
+export GOOGLE_MODEL=gemini-1.5-flash-001
 ```
 
 ## Installation
