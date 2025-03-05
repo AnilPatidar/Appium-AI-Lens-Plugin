@@ -125,13 +125,7 @@ To install the AI Appium Lens Plugin, follow these steps:
 
 appium plugin install --source=npm ai-appium-lens
 
-Set enviornment variables :
 
-```sh
-export GOOGLE_PROJECT_ID=your-project-id
-export GOOGLE_LOCATION=asia-south1
-export GOOGLE_MODEL=gemini-1.5-flash-001
-```
 Supported LLM Model
 
 The following models support multimodal prompt responses.
