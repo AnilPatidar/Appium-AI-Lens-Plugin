@@ -88,7 +88,7 @@ You may need to set up a billing account if you haven't already. Ensure that bil
 Step 5: Create and Set Up a Service Account (Optional)
 If you plan to use Vertex AI programmatically or automate tasks, setting up a service account is recommended.
 
-Create Service Account:
+1. Create Service Account:
 
 Go to IAM & Admin → Service Accounts.
 Click Create Service Account.
@@ -107,7 +107,7 @@ Set enviornment variables :
 export GOOGLE_APPLICATION_CREDENTIALS="/Users/--/Downloads/serviceaccount_vertex_ai.json"
 ```
 
-2.Or if you want easy setup,  Download google cloud sdk ( google-cloud-cli-darwin-arm.tar.gz) : https://cloud.google.com/sdk/docs/install
+2. (Optional) Or if you want easy setup,  Download google cloud sdk ( google-cloud-cli-darwin-arm.tar.gz) : https://cloud.google.com/sdk/docs/install
 
 Unzip and go to the path
 
@@ -129,8 +129,8 @@ Set enviornment variables :
 
 ```sh
 export GOOGLE_PROJECT_ID=your-project-id
-export GOOGLE_LOCATION=your-location
-export GOOGLE_MODEL=your-model
+export GOOGLE_LOCATION=asia-south1
+export GOOGLE_MODEL=gemini-1.5-flash-001
 ```
 Supported LLM Model
 
