@@ -38,7 +38,7 @@ You must have a google cloud account with payment configured and a project creat
 * Google Vision AI 
 * Google Vertex AI 
 
-Two ways to configure gcloud
+Two ways to configure gcloud, you have to only follow one of the options, step 1 is for CI and Step 2 can be for your local machine setup.
 
 1. Create a service account on google cloud account
 
